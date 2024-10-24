@@ -17,5 +17,4 @@ def login():
 # def varpage():
 #     return render_template('new_event.html')
 
-app.run()
-# app.run(debug=True)
+app.run(debug=True)
