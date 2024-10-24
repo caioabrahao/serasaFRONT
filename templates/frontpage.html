@@ -8,21 +8,39 @@
     <link rel="stylesheet" href="../static/styles/styles.css">
 </head>
 
-<body>
-<section class="hero">
+<header class="header">
 
-    <div class="hero__content-box">
-        <div class="hero__texto">
-            <h1>Bem-vindo ao SerasaBET!</h1>
-            <h2>Bem-vindo ao maior site de apostas! Jogue até se endividar!</h2>
-        </div>
-
-        <div class="hero__buttons">
-            <a class="button" href="{{url_for('login')}}">Login</a>
-            <a class="button" href="{{url_for('cadastrar')}}">Cadastrar</a>
-        </div>
+    <div class="header__logo-and-navlist">
+        <img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo">
+        <nav>
+            <ul class="header__navlist">
+                <li>HOME</li>
+                <li>EVENTOS</li>
+                <li>SOBRE NÓS</li>
+            </ul>
+        </nav>
     </div>
 
-</section>
+    <div class="header__call-to-action">
+        <a class="button-secondary" href="{{url_for('login')}}">Login</a>
+        <a class="button" href="{{url_for('cadastrar')}}">Cadastrar</a>
+    </div>
+</header>
+
+<body>
+    <section class="hero-frontpage">
+        <h1>Aposte suas dívidas</h1>
+        <h2>Na SerasaBet, a única dívida é com a diversão!</h2>
+
+        <div>
+            <a class="button" href="{{url_for('cadastrar')}}">Cadastrar</a>
+        </div>
+    </section>
+
+
 </body>
+
+<footer class="footer">
+    <p>Site parte da matéria do Projeto Integrador II</p>
+</footer>
 </html>

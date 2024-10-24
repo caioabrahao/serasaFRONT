@@ -82,6 +82,48 @@ body{
     color: var(--text);
 }
 
+.header{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6rem;
+}
+
+.header__logo{
+    height: 3.5rem;
+}
+
+.header__navlist{
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+
+    font-weight: bold;
+}
+
+.header__logo-and-navlist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.header__call-to-action{
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-frontpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    height: 80vh;
+    padding: 0 6rem;
+}
+
 .hero-login{
     display: flex;
     height: 100vh;
@@ -204,4 +246,34 @@ body{
             width: 50%;
         }
     }
+}
+
+.signup-success-hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(27, 27, 47, .5) url("../images/cassino-img.jpg")  no-repeat center center fixed;
+    background-blend-mode: multiply;
+    background-size: cover;
+
+    height: 100vh;
+
+    .caixa{
+        display: flex;
+        flex-direction: column;
+        background-color: var(--background);
+        padding: 2.5rem;
+        border-radius: 15px;
+        gap: 1rem;
+    }
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 10vh;
 }

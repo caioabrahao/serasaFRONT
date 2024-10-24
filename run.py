@@ -13,8 +13,8 @@ def cadastrar():
 def login():
     return render_template('login.html')
 
-# @app.route('/varpage')
-# def varpage():
-#     return render_template('new_event.html')
+@app.route('/varpage')
+def varpage():
+    return render_template('frontpage.html')
 
 app.run(debug=True)
