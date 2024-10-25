@@ -27,7 +27,7 @@ def home():
 
 @app.route('/my_wallet')
 def my_wallet():
-    return render_template('frontpage.html')
+    return render_template('my_wallet.html')
 
 @app.route('/logout')
 def logout():
@@ -35,10 +35,18 @@ def logout():
 
 @app.route('/search_events')
 def search_events():
-    return render_template('frontpage.html')
+    return render_template('search_events.html')
 
 @app.route('/add_new_event')
 def add_new_event():
+    return render_template('new_event.html')
+
+@app.route('/add_funds')
+def add_funds():
+    return render_template('frontpage.html')
+
+@app.route('/funds_history')
+def funds_history():
     return render_template('frontpage.html')
 
 

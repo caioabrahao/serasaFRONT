@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Evento</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<body>
+<header class="header">
+    <div class="header__logo-and-navlist">
+        <a href="{{url_for('home')}}"><img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo"></a>
+        <nav>
+            <ul class="header__navlist">
+                <li><a href="{{url_for('home')}}">HOME</a></li>
+                <li>EVENTOS</li>
+                <li>SOBRE NÓS</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header__call-to-action">
+        <a class="button-secondary" href="{{url_for('my_wallet')}}">Minha Carteira</a>
+        <a class="button-secondary" href="{{url_for('logout')}}">Logout</a>
+    </div>
+</header>
+
+<main>
+    <section class="new-event-hero">
+        <div class="new-event-hero__title">
+            <h2>CRIAR EVENTO</h2>
+        </div>
+
+        <div class="new-event-hero__form">
+            <form method="POST" action="/addNewEvent">
+                <div class="form-group">
+                    <label for="titulo-evento">Título do Evento</label>
+                    <input class="form-field" id="titulo-evento" type="text" name="txt_titleName" maxlength="50" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="event-description">Descrição</label>
+                    <input class="form-field" id="event-description" type="text" name="txt_description" maxlength="300" required style="width: 50%;">
+                    <p>Faça uma descrição mais detalhada sobre o evento</p>
+                </div>
+
+                <div class="form-group">
+                    <h4>Cota Mínima de Aposta</h4>
+                    <label for="valor">R$</label>
+                    <input class="form-field" id="valor" type="number" name="txt_eventMinQuota" min="1" max="20" step="0.50">
+                    <p><i>Valor mínimo de aposta para os participantes</i></p>
+                </div>
+
+                <div class="categoria-e-data">
+                    <div class="form-group">
+                        <label for="categoria">Categoria</label>
+                        <select class="form-field" id="categoria" name="txt_category">
+                            <option value="BOLSA DE VALORES">Bolsa de Valores</option>
+                            <option value="CELEBRIDADES">Celebridades</option>
+                            <option value="EVENTOS CLIMÁTICOS">Eventos Climáticos</option>
+                            <option value="E-SPORTS">E-Sports</option>
+                            <option value="ELEIÇÕES/POLÍTICA">Eleições/Política</option>
+                            <option value="FUTEBOL">Futebol</option>
+                            <option value="OLIMPÍADAS">Olimpíadas</option>
+                            <option value="OUTROS">Outros</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="data-do-evento">Data do Evento</label>
+                        <input class="form-field" id="data-do-evento" type="date" name="date_eventDate" required>
+                    </div>
+                </div>
+
+
+
+                <button class="button" type="submit">Criar Evento</button>
+            </form>
+        </div>
+    </section>
+</main>
+</body>
+</html>

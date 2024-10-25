@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Carteira</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../static/styles/styles.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__logo-and-navlist">
+        <a href="{{url_for('home')}}"><img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo"></a>
+
+        <nav>
+            <ul class="header__navlist">
+                <li><a href="{{url_for('home')}}">HOME</a></li>
+                <li>EVENTOS</li>
+                <li>SOBRE NÓS</li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="header__call-to-action">
+        <a class="button-secondary" href="{{url_for('my_wallet')}}">Minha Carteira</a>
+        <a class="button-secondary" href="{{url_for('logout')}}">Logout</a>
+    </div>
+</header>
+
+<main>
+    <section class="wallet-hero">
+        <h1>Minha Carteira</h1>
+        <h3>Saldo R$ {{user_funds}}</h3>
+
+        <div class="wallet-hero__buttons">
+            <a class="button" href="{{url_for('add_funds')}}">Adicionar Saldo</a>
+            <a class="button-secondary" href="#">Sacar Saldo</a>
+            <a class="button-secondary" href="{{url_for('funds_history')}}">Histórico de Transações</a>
+        </div>
+
+
+    </section>
+
+
+
+</main>
+
+</body>
+</html>

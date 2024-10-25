@@ -10,7 +10,7 @@
 <body>
 <header class="header">
     <div class="header__logo-and-navlist">
-        <img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo">
+        <a href="{{url_for('home')}}"><img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo"></a>
         <nav>
             <ul class="header__navlist">
                 <li><a href="{{url_for('home')}}">HOME</a></li>
@@ -37,18 +37,25 @@
         <div class="home-hero__dash-blocks">
 
             <div class="home-hero__dash-blocks__search-event">
-                <h3>Busque por Eventos</h3>
+                <div>
+                    <h3>Busque por Eventos</h3>
+                    <p>Procure eventos para apostar</p>
+                </div>
 
                 <form method="get" action="{{url_for('search_events')}}">
+                    <button class="button-secondary" type="submit">Buscar</button>
                     <label for="searchEventBox"></label>
                     <input class="form-field" id="searchEventBox" type="text" placeholder="Pesquise pelo Título/Categoria/Descrição" name="txtInputSearchEvent" style="width: 300px;">
-                    <button class="button-secondary" type="submit">Buscar</button>
                 </form>
             </div>
 
             <div class="home-hero__dash-blocks__criar-evento">
                 <h3>Crie seu evento!</h3>
                 <a class="button-secondary" href="{{url_for('add_new_event')}}">Criar Evento</a>
+            </div>
+
+            <div class="home-hero__dash-blocks__add-funds">
+                <h3>Adicionar fundos</h3>
             </div>
 
 
