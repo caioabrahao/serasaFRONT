@@ -9,12 +9,11 @@
 </head>
 
 <header class="header">
-
     <div class="header__logo-and-navlist">
-        <img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo">
+        <a href="{{url_for('home')}}"><img class="header__logo" src="../static/images/logos/poker-chip.png" alt="poker-logo"></a>
         <nav>
             <ul class="header__navlist">
-                <li>HOME</li>
+                <li><a href="{{url_for('home')}}">HOME</a></li>
                 <li>EVENTOS</li>
                 <li>SOBRE NÓS</li>
             </ul>
@@ -22,19 +21,23 @@
     </div>
 
     <div class="header__call-to-action">
-        <a class="button-secondary" href="{{url_for('login')}}">Login</a>
         <a class="button" href="{{url_for('cadastrar')}}">Cadastrar</a>
+        <a class="button-secondary" href="{{url_for('login')}}">Login</a>
     </div>
 </header>
 
 <body>
     <section class="hero-frontpage">
-        <h1>Aposte suas dívidas</h1>
-        <h2>Na SerasaBet, a única dívida é com a diversão!</h2>
-
-        <div>
+        <div class="hero-frontpage__left">
+            <h1>Aposte suas dívidas</h1>
+            <h2>Na SerasaBet, a única dívida é com a diversão!</h2>
             <a class="button" href="{{url_for('cadastrar')}}">Cadastrar</a>
         </div>
+
+        <div class="hero-frontpage__right">
+            <img src="../static/images/illustrations/undraw_finance_re_gnv2.svg" alt="ilustração">
+        </div>
+        <img class="arrow-down" src="../static/images/icons/arrow-down.svg" alt="arrow down">
     </section>
 
     <section class="frontpage-sect2">

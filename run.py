@@ -43,12 +43,19 @@ def add_new_event():
 
 @app.route('/add_funds')
 def add_funds():
-    return render_template('frontpage.html')
+    return render_template('add_funds.html')
 
 @app.route('/funds_history')
 def funds_history():
+    return render_template('funds_history.html')
+
+@app.route('/add_funds_card')
+def add_funds_card():
     return render_template('frontpage.html')
 
+@app.route('/add_funds_pix')
+def add_funds_pix():
+    return render_template('frontpage.html')
 
 
 app.run(debug=True)
